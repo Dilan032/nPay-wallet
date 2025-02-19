@@ -1,5 +1,5 @@
 import './App.css'
-import Login from './components/pageComponents/login/Login'
+import Login from './pages/Login'
 import { Button } from './components/ui/button'
 
 function App() {

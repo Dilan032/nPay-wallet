@@ -10,58 +10,75 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import Logo from '../../Logo'
-import LoginFooter from './LoginFooter'
+import Logo from '../components/Logo'
+import LoginFooter from '../components/pageComponents/login/LoginFooter'
 import { useNavigate } from 'react-router-dom'
 import { AlertCircle } from "lucide-react";
+import Swal from 'sweetalert2'
 
 export default function Login() {
     const navigate = useNavigate();
-    const [value, setValue] = useState("");
+    const [username, setUsername] = useState(""); 
+    const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    const handleChange = (e) => {
+    const handleUsernameChange = (e) => {
         let inputValue = e.target.value;
 
-        // Allow user to clear input
         if (inputValue === "") {
-            setValue("");
+            setUsername("");
             setError("");
             return;
         }
 
-        // Remove unwanted characters (only allow letters, numbers, and a single '-')
         inputValue = inputValue.replace(/[^0-9a-zA-Z-]/g, "");
 
-        // Ensure that '-' is automatically inserted after two numbers
         if (/^\d{2}$/.test(inputValue)) {
             inputValue += "-";
         }
 
-        // Validate: First two characters must be numbers
         if (inputValue.length >= 2 && (!/^\d{2}/.test(inputValue))) {
             setError("First two characters must be numbers.");
         } else {
-            setError(""); // Clear error if valid
+            setError("");
         }
 
-        setValue(inputValue);
+        setUsername(inputValue);
     };
 
     const handleLogin = () => {
+        if (username === "" || password === "") {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.onmouseenter = Swal.stopTimer;
+                  toast.onmouseleave = Swal.resumeTimer;
+                }
+              });
+              Toast.fire({
+                icon: "error",
+                title: "Please fill all the fields."
+              });
+            return;
+        }
 
-        // authentication logic here
-        navigate('/home');
+        if (username === "00-admin" && password === "abc") {
+            navigate('/admin'); // Redirect to Admin Page
+        } else {
+            navigate('/home'); // Redirect to User Page
+        }
     };
 
     return (
         <div className='flex justify-center items-center min-h-screen'>
-            {/* Logo */}
             <div className="absolute md:top-5 top-28 left-5">
                 <Logo className={"md:w-28 w-40 h-auto"} />
             </div>
 
-            {/* Login Card */}
             <Card className="w-full max-w-md p-6 md:m-auto m-2 shadow-lg hover:drop-shadow-xl transition-all duration-300">
                 <CardHeader>
                     <CardTitle className="text-center text-3xl font-semibold text-blue-600">
@@ -81,8 +98,8 @@ export default function Login() {
                             type="text"
                             placeholder="XX - User name"
                             className="mt-1"
-                            value={value}
-                            onChange={handleChange}
+                            value={username}
+                            onChange={handleUsernameChange}
                         />
                         {error && (
                             <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
@@ -93,7 +110,14 @@ export default function Login() {
 
                     <div>
                         <Label htmlFor="password" className="text-black">Password</Label>
-                        <Input id="password" type="password" placeholder="▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪" className="mt-1" />
+                        <Input 
+                            id="password" 
+                            type="password" 
+                            placeholder="▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪" 
+                            className="mt-1"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
                     </div>
                     <Button className="w-full mt-2 shadow-lg shadow-indigo-500/40" onClick={handleLogin}>
                         Login
@@ -106,7 +130,6 @@ export default function Login() {
                 </CardFooter>
             </Card>
 
-            {/* Login Footer */}
             <LoginFooter />
         </div>
     );
