@@ -75,11 +75,11 @@ export default function Login() {
 
     return (
         <div className='flex justify-center items-center min-h-screen'>
-            <div className="absolute md:top-5 top-28 left-5">
+            <div className="absolute md:top-5 top-28 left-5 z-10">
                 <Logo className={"md:w-28 w-40 h-auto"} />
             </div>
 
-            <Card className="w-full max-w-md p-6 md:m-auto m-2 shadow-lg hover:drop-shadow-xl transition-all duration-300">
+            <Card className="z-0 w-full max-w-md p-6 md:m-auto m-2 shadow-lg hover:drop-shadow-xl transition-all duration-300">
                 <CardHeader>
                     <CardTitle className="text-center text-3xl font-semibold text-blue-600">
                         Welcome <span className='text-black'>Back</span>
