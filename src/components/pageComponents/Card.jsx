@@ -1,5 +1,5 @@
 import React from 'react'
-import cardImage from '@/assets/home-page/card.svg'
+import cardImage from '../../assets/home-page/Card.svg'
 
 function Card() {
   return (
