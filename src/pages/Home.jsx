@@ -3,7 +3,7 @@ import FooterContent from '@/mainLayout/FooterContent'
 import HeadContent from '@/mainLayout/HeadContent'
 import React from 'react'
 import Card from '../components/pageComponents/Card'
-import PaymentWay from '@/components/pageComponents/paymentOptions/paymentWay'
+import PaymentWay from '../components/pageComponents/paymentOptions/PaymentWay.jsx'
 
 
 function Home() {
