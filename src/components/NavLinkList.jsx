@@ -4,9 +4,13 @@ import NavLinks from '@/components/NavLinks'
 function NavLinkList() {
   return (
     <>
-        <NavLinks linkName= "Home" url= "/home"/>
-        <NavLinks linkName= "Profile" url= "/profile"/>
-        <NavLinks linkName= "Login" url= "/"/>
+        <div className='text-white'>
+            <NavLinks linkName= "Home" url= "/home"/>
+            <NavLinks linkName= "AboutUs" url= "/aboutUs"/>
+            <NavLinks linkName= "Profile" url= "/profile"/>
+            <NavLinks linkName= "Login" url= "/"/>
+        </div>
+        
     </>
   )
 }

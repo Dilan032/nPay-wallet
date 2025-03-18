@@ -8,15 +8,31 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home';
 import Admin from './pages/Admin';
+import AboutUs from './pages/AboutUs';
+import UserProfile from './components/pageComponents/userProfile/UserProfile';
+import Login from './pages/Login';
+import ContactUs from './pages/ContactUs';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Login />,
   },
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/aboutUs",
+    element: <AboutUs />,
+  },
+  {
+    path: "/contactUs",
+    element: <ContactUs />,
+  },
+  {
+    path: "/profile",
+    element: <UserProfile />,
   },
   {
     path: "/admin",
