@@ -12,39 +12,39 @@ import contact from '../../../assets/icon/contact.png'
 function PaymentWay() {
   return (
     <>
-        <div className="flex justify-center mt-5">
+        <div className="flex justify-center">
                 <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 text-blue-900 text-center">
                     <div className="bg-white md:h-32 h-24 p-5 py-5 md:w-40 w-30 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex flex-col items-center">
                         <img src={topup} alt="top-up" className="md:w-12 w-8 md:h-12 h-8 object-contain" />
-                        <p className="mt-2">Top up</p>
+                        <a href="TopUpPage"><p className="mt-2">Top up</p></a>
                     </div>
                     <div className="bg-white md:h-32 h-24 p-5 py-5 w-40 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex flex-col items-center">
                         <img src={sendMoney} alt="sendMoney" className="md:w-12 w-8 md:h-12 h-8 object-contain" />
-                        <p className="mt-2">Send money</p>
+                        <a href="SendMoneyPage"><p className="mt-2">Send money</p></a>
                     </div>
                     <div className="bg-white md:h-32 h-24 p-5 py-5 w-40 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex flex-col items-center">
                         <img src={moneytransfer} alt="moneytransfer" className="md:w-12 w-8 md:h-12 h-8 object-contain" />
-                        <p className="mt-2">Transfer</p>
+                        <a href="TransferPage"><p className="mt-2">Transfer</p></a>
                     </div>
                     <div className="bg-white md:h-32 h-24 p-5 py-5 w-40 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex flex-col items-center">
                         <img src={mobilePay} alt="mobilePay" className="md:w-12 w-8 md:h-12 h-8 object-contain" />
-                        <p className="mt-2">Mobile Payment</p>
+                        <a href="MobilePayment"><p className="mt-2">Mobile Payment</p></a>
                     </div>
                     <div className="bg-white md:h-32 h-24 p-5 py-5 w-40 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex flex-col items-center">
                         <img src={billPay} alt="billPay" className="md:w-12 w-8 md:h-12 h-8 object-contain" />
-                        <p className="mt-2">Bill Payment</p>
+                        <a href="BillPayment"><p className="mt-2">Bill Payment</p></a>
                     </div>
                     <div className="bg-white md:h-32 h-24 p-5 py-5 w-40 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex flex-col items-center">
                         <img src={history} alt="history" className="md:w-12 w-8 md:h-12 h-8 object-contain" />
-                        <p className="mt-2">Mobile Payee</p>
+                        <a href="MobilePayee"><p className="mt-2">Mobile Payee</p></a>
                     </div>
                     <div className="bg-white md:h-32 h-24 p-5 py-5 w-40 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex flex-col items-center">
                         <img src={contact} alt="contact" className="md:w-12 w-8 md:h-12 h-8 object-contain" />
-                        <p className="mt-2">Contact Us</p>
+                        <a href="ContactUs"><p className="mt-2">Contact Us</p></a>
                     </div>
                     <div className="bg-white md:h-32 h-24 p-5 py-5 w-40 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex flex-col items-center">
                         <img src={profile} alt="profile" className="md:w-12 w-8 md:h-12 h-8 object-contain" />
-                        <p className="mt-2">Profile</p>
+                        <a href="profile"><p className="mt-2">Profile</p></a>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import cardImage from '../../assets/home-page/Card.svg'
 function Card() {
   return (
     <>
-        <div className='flex justify-center md:mt-10 mt-6'>
+        <div className='flex justify-center md:mt-2 mt-2'>
             <img src={cardImage} alt="card image" className='w-45 md:w-96 mx-4 md:ml-10 shadow-inner'/>
             <div className='absolute text-white font-mono  mt-15 pt-16 mr-20'>
                 <p className='text-2xl'>01-1010101-00001</p>

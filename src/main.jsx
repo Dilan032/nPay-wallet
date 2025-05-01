@@ -12,6 +12,12 @@ import AboutUs from './pages/AboutUs';
 import UserProfile from './components/pageComponents/userProfile/UserProfile';
 import Login from './pages/Login';
 import ContactUs from './pages/ContactUs';
+import BillPayment from './pages/BillPayment';
+import MobilePayee from './pages/MobilePayee';
+import MobilePayment from './pages/MobilePayment';
+import TransferPage from './pages/TransferPage';
+import TopUpPage from './pages/TopUpPage';
+import SendMoneyPage from './pages/SendMoneyPage';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +43,30 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <Admin />,
+  },
+  {
+    path: "/BillPayment",
+    element: <BillPayment />,
+  },
+  {
+    path: "/MobilePayee",
+    element: <MobilePayee />,
+  },
+  {
+    path: "/MobilePayment",
+    element: <MobilePayment />,
+  },
+  {
+    path: "/TransferPage",
+    element: <TransferPage />,
+  },
+  {
+    path: "/TopUpPage",
+    element: <TopUpPage />,
+  },
+  {
+    path: "/SendMoneyPage",
+    element: <SendMoneyPage />,
   },
 ]);
 
