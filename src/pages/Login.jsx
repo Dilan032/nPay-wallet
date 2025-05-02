@@ -75,7 +75,7 @@ export default function Login() {
 
     return (
         <div className='flex justify-center items-center min-h-screen'>
-            <div className="absolute md:top-5 top-28 left-5 z-10">
+            <div className="absolute md:top-5 left-5 z-10">
                 <Logo className={"md:w-28 w-40 h-auto"} />
             </div>
 
