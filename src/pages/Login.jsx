@@ -76,7 +76,7 @@ export default function Login() {
     return (
         <div className='flex justify-center items-center min-h-screen'>
             <div className="absolute md:top-5 left-5 z-10">
-                <Logo className={"md:w-28 w-40 h-auto"} />
+                <Logo className={"md:w-28 w-40"} />
             </div>
 
             <Card className="z-0 w-full max-w-md p-6 md:m-auto m-2 shadow-lg hover:drop-shadow-xl transition-all duration-300">
